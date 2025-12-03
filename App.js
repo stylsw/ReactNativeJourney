@@ -7,7 +7,8 @@ import React, {Component} from 'react';
 // import Index from './src_03_Dimensions';
 // import Index from './src_04_Alert_Button';
 // import Index from './src_05_Swtich_StatusBar';
-import Index from './src_06_ActivityIndicator';
+// import Index from './src_06_ActivityIndicator';
+import Index from './src_07_Image';
 export default class App extends Component {
   render() {
     return <Index />;
