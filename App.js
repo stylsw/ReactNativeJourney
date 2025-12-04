@@ -9,7 +9,8 @@ import React, {Component} from 'react';
 // import Index from './src_05_Swtich_StatusBar';
 // import Index from './src_06_ActivityIndicator';
 // import Index from './src_07_Image';
-import Index from './src_08_TextInput';
+// import Index from './src_08_TextInput';
+import Index from './src_09_Touchable';
 export default class App extends Component {
   render() {
     return <Index />;
