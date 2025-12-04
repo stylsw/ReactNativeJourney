@@ -14,7 +14,9 @@ import React, {Component} from 'react';
 // import Index from './src_10_ScrollView';
 // import Index from './src_11_SectionList';
 // import Index from './src_12_FlatList';
-import Index from './src_13_Animated';
+// import Index from './src_13_Animated';
+// import Index from './src_14_Webview/WebViewURI';
+import Index from './src_14_Webview/WebViewHTLM';
 export default class App extends Component {
   render() {
     return <Index />;
