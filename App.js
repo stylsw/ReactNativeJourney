@@ -17,7 +17,8 @@ import React, {Component} from 'react';
 // import Index from './src_13_Animated';
 // import Index from './src_14_Webview/WebViewURI';
 // import Index from './src_14_Webview/WebViewHTLM';
-import Index from './src_15_Picker';
+// import Index from './src_15_Picker';
+import Index from './src_16_Swiper';
 export default class App extends Component {
   render() {
     return <Index />;
