@@ -20,7 +20,8 @@ import React, {Component} from 'react';
 // import Index from './src_15_Picker';
 // import Index from './src_16_Swiper';
 // import Index from './src_17_AsyncStorage';
-import Index from './src_18_Geolocation';
+// import Index from './src_18_Geolocation';
+import Index from './src_19_Camera';
 export default class App extends Component {
   render() {
     return <Index />;

@@ -80,6 +80,9 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        
+        // 为 react-native-camera 选择默认的 general 变体
+        missingDimensionStrategy 'react-native-camera', 'general'
     }
     signingConfigs {
         debug {
