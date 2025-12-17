@@ -1,6 +1,7 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React, {Component} from 'react';
-import {Text, StyleSheet, View, Button} from 'react-native';
+import {Text, StyleSheet, View} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 function HomeScreen(prop) {
   return (
@@ -24,13 +25,13 @@ export default class index extends Component {
       <Tab.Navigator
         screenOptions={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
-            let iconName = 'default';
+            let iconName = '';
             if (route.name === 'Home') {
-              iconName = '首页';
+              iconName = focused ? 'add-circle' : 'add-circle-outline';
             } else if (route.name === 'News') {
-              iconName = '新闻';
+              iconName = focused ? 'person' : 'person-outline';
             }
-            return <Button title={iconName} size={size} color={color} />;
+            return <Icon name={iconName} size={size} color={color} />;
           },
         })}
         tabBarOptions={{activeTintColor: 'tomato', inactiveTintColor: 'gray'}}>
