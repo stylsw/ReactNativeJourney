@@ -25,7 +25,8 @@ import {NavigationContainer} from '@react-navigation/native';
 // import Index from './src_20_ImagePicker';
 // import Index from './src_20_ImagePicker';
 // import Index from './src_21_Loading';
-import Index from './src_22_StackNavigator';
+// import Index from './src_22_StackNavigator';
+import Index from './src_23_BottomTab';
 export default class App extends Component {
   render() {
     return (

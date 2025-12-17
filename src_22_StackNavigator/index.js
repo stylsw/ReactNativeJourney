@@ -14,7 +14,7 @@ function HomeScreen(prop) {
     </View>
   );
 }
-function Newscreen(prop) {
+function NewsScreen(prop) {
   return (
     <View style={[styles.container]}>
       <Text style={styles.text}>News Screen</Text>
@@ -48,7 +48,7 @@ export default class index extends Component {
             ),
           }}
         />
-        <Stack.Screen name="News" component={Newscreen} />
+        <Stack.Screen name="News" component={NewsScreen} />
       </Stack.Navigator>
     );
   }
