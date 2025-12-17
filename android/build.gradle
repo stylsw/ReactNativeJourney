@@ -24,3 +24,15 @@ buildscript {
         classpath("com.facebook.react:react-native-gradle-plugin")
     }
 }
+
+// Force Reanimated to build from source early enough to avoid AAR fallback
+subprojects { subproj ->
+    afterEvaluate {
+        if (subproj.plugins.hasPlugin("com.android.application")) {
+            if (!subproj.ext.has("reanimated")) {
+                subproj.ext.reanimated = [:]
+            }
+            subproj.ext.reanimated.buildFromSource = true
+        }
+    }
+}
