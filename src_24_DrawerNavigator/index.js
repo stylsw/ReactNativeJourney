@@ -46,8 +46,7 @@ export default class index extends Component {
         drawerContentOptions={{
           activeTintColor: 'red',
           itemStyle: {marginVertical: 20},
-        }}
-        >
+        }}>
         <Drawer.Screen
           name="Home"
           component={HomeScreen}
