@@ -31,7 +31,9 @@ import {NavigationContainer} from '@react-navigation/native';
 // import Index from './src_25_MaterialTopTabNavigator';
 // import Index from './src_26_Nesting_Navigation';
 // import Index from './src_27_PassingParameters';
-import Index from './src_28_API';
+// import Index from './src_28_API';
+import Index from './src_29_project';
+
 export default class App extends Component {
   render() {
     return (

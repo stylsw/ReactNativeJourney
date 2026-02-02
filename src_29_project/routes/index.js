@@ -1,0 +1,46 @@
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import React, {Component} from 'react';
+import {StyleSheet} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+import HomeScreen from './HomeStack';
+import NewsScreen from './NewsStack';
+import UserScreen from './UserStack';
+const Tab = createBottomTabNavigator();
+
+export default class index extends Component {
+  render() {
+    return (
+      <Tab.Navigator
+        screenOptions={({route}) => ({
+          tabBarIcon: ({focused, color, size}) => {
+            let iconName = '';
+            if (route.name === 'Home') {
+              iconName = focused ? 'add-circle' : 'add-circle-outline';
+            } else if (route.name === 'News') {
+              iconName = focused ? 'settings' : 'settings-outline';
+            } else if (route.name === 'User') {
+              iconName = focused ? 'person' : 'person-outline';
+            }
+            return <Icon name={iconName} size={size} color={color} />;
+          },
+        })}
+        tabBarOptions={{activeTintColor: 'tomato', inactiveTintColor: 'gray'}}>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="News" component={NewsScreen} />
+        <Tab.Screen name="User" component={UserScreen} />
+      </Tab.Navigator>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 40,
+  },
+  headerRight: {marginRight: 10},
+});
