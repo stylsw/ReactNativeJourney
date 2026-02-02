@@ -51,7 +51,7 @@ export const getThreeDays = async coords => {
 // 获取生活指数，默认type=0,获取所有的生活指数
 export const getIndices = async (coords, type = 0) => {
   const key = '687e517f06684448a9f4695721414a07';
-  const url = `https://devapi.qweather.com/v7/indices/id?key=${key}&location=${coords.longitude},${coords.latitude}&type=${type}`;
+  const url = `https://devapi.qweather.com/v7/indices/1d?key=${key}&location=${coords.longitude},${coords.latitude}&type=${type}`;
   console.log('url', url);
   try {
     const response = await (await fetch(url)).json();
