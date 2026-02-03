@@ -11,6 +11,7 @@ export default class index extends Component {
   render() {
     return (
       <Tab.Navigator
+        initialRouteName="News"
         screenOptions={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
             let iconName = '';
