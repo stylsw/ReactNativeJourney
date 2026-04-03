@@ -28,6 +28,31 @@ buildscript {
 // Force Reanimated to build from source early enough to avoid AAR fallback
 subprojects { subproj ->
     afterEvaluate {
+        if (subproj.plugins.hasPlugin("com.android.application") || subproj.plugins.hasPlugin("com.android.library")) {
+            subproj.android {
+                compileOptions {
+                    sourceCompatibility JavaVersion.VERSION_17
+                    targetCompatibility JavaVersion.VERSION_17
+                }
+            }
+
+            subproj.tasks.withType(JavaCompile).configureEach { compileTask ->
+                compileTask.sourceCompatibility = JavaVersion.VERSION_17.toString()
+                compileTask.targetCompatibility = JavaVersion.VERSION_17.toString()
+                if (compileTask.options.hasProperty("release")) {
+                    compileTask.options.release.set(17)
+                }
+            }
+
+            if (subproj.plugins.hasPlugin("kotlin-android") || subproj.plugins.hasPlugin("org.jetbrains.kotlin.android")) {
+                subproj.tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+                    kotlinOptions {
+                        jvmTarget = "17"
+                    }
+                }
+            }
+        }
+
         if (subproj.plugins.hasPlugin("com.android.application")) {
             if (!subproj.ext.has("reanimated")) {
                 subproj.ext.reanimated = [:]
