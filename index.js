@@ -2,6 +2,8 @@
  * @format
  */
 
+import './polyfills/dimensions';
+import './polyfills/keyboard';
 import 'react-native-gesture-handler';
 import {AppRegistry, LogBox} from 'react-native';
 import App from './App';

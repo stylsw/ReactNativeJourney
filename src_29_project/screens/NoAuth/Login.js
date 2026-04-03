@@ -15,16 +15,16 @@ import React, {Component} from 'react';
 import * as Animatable from 'react-native-animatable';
 import Icon from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
-// import {connect} from 'react-redux';
-// import {loginSuccess} from '../../redux/actions/User';
+import {connect} from 'react-redux';
+import {loginSuccess} from '../../redux/actions/User';
 
-// const mapStateToProps = state => {
-//   return {
-//     isLogin: state.User.isLogin,
-//   };
-// };
+const mapStateToProps = state => {
+  return {
+    isLogin: state.User.isLogin,
+  };
+};
 
-export default class Login extends Component {
+class Login extends Component {
   constructor() {
     super();
     this.state = {
@@ -189,7 +189,7 @@ export default class Login extends Component {
   }
 }
 
-// export default connect(mapStateToProps, {loginSuccess})(Login);
+export default connect(mapStateToProps, {loginSuccess})(Login);
 
 const styles = StyleSheet.create({
   bgImage: {

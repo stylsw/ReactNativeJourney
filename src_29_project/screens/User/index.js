@@ -11,8 +11,15 @@ import {
   Alert,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {logout} from '../../redux/actions/User';
+import {connect} from 'react-redux';
 
-export default class index extends Component {
+class index extends Component {
+  doLogout = () => {
+    this.props.logout();
+    Alert.alert('成功', '退出成功');
+  };
+
   render() {
     return (
       <SafeAreaView style={styles.container}>
@@ -80,6 +87,7 @@ export default class index extends Component {
     );
   }
 }
+export default connect(null, {logout})(index);
 
 const styles = StyleSheet.create({
   container: {
