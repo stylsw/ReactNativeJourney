@@ -56,7 +56,7 @@ export default class index extends Component {
               <Icon name="chevron-forward-outline" size={20} color={'#bbb'} />
             </View>
           </TouchableOpacity>
-          {/* <TouchableOpacity
+          <TouchableOpacity
             onPress={() => this.props.navigation.navigate('Counter')}>
             <View style={[styles.listItem]}>
               <View style={{flexDirection: 'row'}}>
@@ -65,7 +65,7 @@ export default class index extends Component {
               </View>
               <Icon name="chevron-forward-outline" size={20} color={'#bbb'} />
             </View>
-          </TouchableOpacity> */}
+          </TouchableOpacity>
           <TouchableOpacity onPress={this.doLogout}>
             <View style={[styles.listItem]}>
               <View style={{flexDirection: 'row'}}>

@@ -5,7 +5,7 @@ import UserScreen from '../screens/User';
 import AboutScreen from '../screens/User/About';
 import LoginScreen from '../screens/NoAuth/Login';
 import RegistrScreen from '../screens/NoAuth/Register';
-// import CounterScreen from '../screens/User/Counter';
+import CounterScreen from '../screens/User/Counter';
 const Stack = createStackNavigator();
 
 export default class UserStack extends Component {
@@ -38,7 +38,7 @@ export default class UserStack extends Component {
         />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Registr" component={RegistrScreen} />
-        {/* <Stack.Screen name="Counter" component={CounterScreen} /> */}
+        <Stack.Screen name="Counter" component={CounterScreen} />
       </Stack.Navigator>
     );
   }

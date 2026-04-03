@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
+import {Provider as StoreProvider} from 'react-redux';
+import store from './src_29_project/redux/store';
 // import Index from './src_01_StyleSheet';
 // import Index from './src_02_Flexbox/FlexDirection';
 // import Index from './src_02_Flexbox/JustifyContent';
@@ -37,9 +39,11 @@ import Index from './src_29_project';
 export default class App extends Component {
   render() {
     return (
-      <NavigationContainer>
-        <Index />
-      </NavigationContainer>
+      <StoreProvider store={store}>
+        <NavigationContainer>
+          <Index />
+        </NavigationContainer>
+      </StoreProvider>
     );
   }
 }

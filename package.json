@@ -33,7 +33,10 @@
     "react-native-swiper": "^1.6.0",
     "react-native-tab-view": "^2.x",
     "react-native-vector-icons": "^10.3.0",
-    "react-native-webview": "13.6.2"
+    "react-native-webview": "13.6.2",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1",
+    "redux-thunk": "^3.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
